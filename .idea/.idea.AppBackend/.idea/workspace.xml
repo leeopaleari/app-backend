@@ -8,7 +8,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea9bff8e-5891-4d27-85eb-0f28450c15ab" name="Changes" comment="" />
+    <list default="true" id="ea9bff8e-5891-4d27-85eb-0f28450c15ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/CategoryDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/ProductDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Mappings/DomainToDTOMappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6/storage_v2/_src_/database/local_dev.QeUuuA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6/storage_v2/_src_/database/local_dev.QeUuuA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra.Data/EntitiesConfiguration/CategoryConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/EntitiesConfiguration/CategoryConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra.Data/EntitiesConfiguration/ProductConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/EntitiesConfiguration/ProductConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra.IoC/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.IoC/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra.IoC/Infra.IoC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.IoC/Infra.IoC.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.IoC/DependencyInjection.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -158,7 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719427412633</updated>
       <workItem from="1719427414228" duration="16808000" />
-      <workItem from="1719450915920" duration="3515000" />
+      <workItem from="1719450915920" duration="5790000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />

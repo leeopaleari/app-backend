@@ -1,3 +1,4 @@
+using Application.Mappings;
 using Domain.Interfaces;
 using Infra.Data.Context;
 using Infra.Data.Repositories;
@@ -27,7 +28,8 @@ public static class DependencyInjection
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
-        
+
+        services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
         return services;
     }
 }
