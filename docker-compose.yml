@@ -1,0 +1,81 @@
+﻿services:
+  api:
+    image: api
+    build:
+      context: .
+      dockerfile: API/Dockerfile
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: '256MB'
+    depends_on:
+      - pgsql
+
+#    mysql:
+#      image: mysql:latest
+#      container_name: mysql
+#      restart: unless-stopped
+#      tty: true
+#      ports:
+#        - "3306:3306"
+#      volumes:
+#        - dbdata:/var/lib/mysql # usado externo, fica no host mas o compose não pode excluir
+#      command: [ '--max_allowed_packet=32505856', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+#      environment:
+#        - MYSQL_DATABASE=local_dev
+#        - MYSQL_ROOT_PASSWORD=1232
+#      networks:
+#        - ingress
+        
+  pgsql:
+    image: postgres
+    container_name: motoca-pgsql
+    restart: unless-stopped
+    # set shared memory limit when using docker-compose
+    shm_size: 128mb
+    # or set shared memory limit when deploy via swarm stack
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    #  - type: tmpfs
+    #    target: /dev/shm
+    #    tmpfs:
+    #      size: 134217728 # 128*2^20 bytes = 128Mb
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: local_dev
+      POSTGRES_PASSWORD: 1232
+    networks:
+      - ingress
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '512MB'
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8080:80"
+    networks:
+      - ingress
+    depends_on:
+      - pgsql
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: '256MB'
+
+networks:
+  ingress:
+    driver: bridge
+
+volumes:
+  dbdata:
+    external: true
