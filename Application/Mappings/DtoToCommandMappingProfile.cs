@@ -1,4 +1,4 @@
-using Application.DTOs;
+using Application.DTOs.Product;
 using Application.Features.Products.Commands;
 using AutoMapper;
 
@@ -8,8 +8,8 @@ public class DtoToCommandMappingProfile : Profile
 {
     public DtoToCommandMappingProfile()
     {
-        CreateMap<ProductDTO, ProductCreateCommand>();
-        CreateMap<ProductDTO, ProductUpdateCommand>();
-        CreateMap<ProductDTO, ProductUpdateCommand>();
+        CreateMap<CreateProductDto, ProductCreateCommand>();
+        CreateMap<CreateProductDto, ProductUpdateCommand>();
+        CreateMap<CreateProductDto, ProductUpdateCommand>();
     }
 }

@@ -1,4 +1,4 @@
-using Application.DTOs;
+using Application.DTOs.Product;
 using Application.Features.Products.Commands;
 using Application.Features.Products.Queries;
 using Application.Interfaces;
@@ -9,7 +9,7 @@ namespace Application.Service;
 
 public class ProductService(IMediator mediator, IMapper mapper) : IProductService
 {
-    public async Task<IEnumerable<ProductDTO>> GetAll()
+    public async Task<IEnumerable<ReadProductDto>> GetAll()
     {
         var productsQuery = new GetProductsQuery();
 
@@ -19,10 +19,10 @@ public class ProductService(IMediator mediator, IMapper mapper) : IProductServic
 
         var result = await mediator.Send(productsQuery);
 
-        return mapper.Map<IEnumerable<ProductDTO>>(result);
+        return mapper.Map<IEnumerable<ReadProductDto>>(result);
     }
 
-    public async Task<ProductDTO> GetById(int? id)
+    public async Task<ReadProductDto> GetById(int? id)
     {
         var productsQuery = new GetProductByIdQuery(id.Value);
 
@@ -31,16 +31,16 @@ public class ProductService(IMediator mediator, IMapper mapper) : IProductServic
 
         var result = await mediator.Send(productsQuery);
 
-        return mapper.Map<ProductDTO>(result);
+        return mapper.Map<ReadProductDto>(result);
     }
 
-    public async Task Add(ProductDTO productDto)
+    public async Task Add(CreateProductDto productDto)
     {
         var productCreateCommand = mapper.Map<ProductCreateCommand>(productDto);
         await mediator.Send(productCreateCommand);
     }
 
-    public async Task Update(ProductDTO productDto)
+    public async Task Update(CreateProductDto productDto)
     {
         var productUpdateCommand = mapper.Map<ProductCreateCommand>(productDto);
         await mediator.Send(productUpdateCommand);

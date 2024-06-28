@@ -1,4 +1,4 @@
-using Application.DTOs;
+using Application.DTOs.Product;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +16,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAll()
+    public async Task<ActionResult<IEnumerable<ReadProductDto>>> GetAll()
     {
         try
         {
@@ -32,7 +32,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<IEnumerable<ProductDTO>>> GetById(int id)
+    public async Task<ActionResult<IEnumerable<ReadProductDto>>> GetById(int id)
     {
         try
         {
@@ -53,7 +53,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<ProductDTO>> Post([FromBody] ProductDTO productDto)
+    public async Task<ActionResult<CreateProductDto>> Post([FromBody] CreateProductDto productDto)
     {
         if (!ModelState.IsValid)
         {

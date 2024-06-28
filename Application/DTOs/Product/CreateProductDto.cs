@@ -1,12 +1,10 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
-using Domain.Entities;
 
-namespace Application.DTOs;
+namespace Application.DTOs.Product;
 
-public class ProductDTO
+public class CreateProductDto
 {
     public int Id { get; set; }
 
@@ -37,8 +35,6 @@ public class ProductDTO
     [MaxLength(250)]
     [DisplayName("Product Image")]
     public string Image { get; set; }
-    
-    public CategoryDTO Category { get; set; }
 
     [DisplayName("CategoryId")]
     public int CategoryId { get; set; }

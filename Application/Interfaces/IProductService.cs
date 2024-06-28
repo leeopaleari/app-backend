@@ -1,16 +1,16 @@
-using Application.DTOs;
+using Application.DTOs.Product;
 
 namespace Application.Interfaces;
 
 public interface IProductService
 {
-    Task<IEnumerable<ProductDTO>> GetAll();
+    Task<IEnumerable<ReadProductDto>> GetAll();
 
-    Task<ProductDTO> GetById(int? id);
+    Task<ReadProductDto> GetById(int? id);
     
-    Task Add(ProductDTO productDto);
+    Task Add(CreateProductDto productDto);
 
-    Task Update(ProductDTO productDto);
+    Task Update(CreateProductDto productDto);
 
     Task Remove(int? id);
 }

@@ -8,12 +8,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea9bff8e-5891-4d27-85eb-0f28450c15ab" name="Changes" comment="">
+    <list default="true" id="ea9bff8e-5891-4d27-85eb-0f28450c15ab" name="Changes" comment="fix: get products">
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/Product/CreateProductDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/DTOs/Product/ReadProductDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/DTOs/ProductDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/DTOs/ProductDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Interfaces/IProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Interfaces/IProductService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Interfaces/IProductRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Repositories/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/Repositories/ProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/ProductsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/DTOs/ProductDTO.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Application/Interfaces/IProductService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Domain/Interfaces/IProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.Data/Repositories/ProductRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a42749c8130544468d361c7e53d0799b3ea00/f7/85a2c862/NotFound.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12f8d680aa1c5ae78dc1fb7cf8212be01e323372dbe3b9b87360e27c58936a/IRequest.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -171,7 +174,7 @@
       <workItem from="1719450915920" duration="7948000" />
       <workItem from="1719520309617" duration="2482000" />
       <workItem from="1719532731013" duration="2737000" />
-      <workItem from="1719597513448" duration="7838000" />
+      <workItem from="1719597513448" duration="8224000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -197,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719604698280</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: get products">
+      <option name="closed" value="true" />
+      <created>1719605453508</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719605453508</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +222,8 @@
     <MESSAGE value="feat: initial commit" />
     <MESSAGE value="feat: AutoMapper e DTO" />
     <MESSAGE value="feat: add cqrs" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add cqrs" />
+    <MESSAGE value="fix: get products" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: get products" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
