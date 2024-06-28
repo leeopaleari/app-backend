@@ -8,9 +8,13 @@
       resources:
         limits:
           cpus: '0.25'
-          memory: '256MB'
+          memory: '128MB'
+    ports:
+      - "8080:8080"
     depends_on:
       - pgsql
+    networks:
+      - ingress
 
 #    mysql:
 #      image: mysql:latest
@@ -52,25 +56,25 @@
       resources:
         limits:
           cpus: '0.5'
-          memory: '512MB'
+          memory: '128MB'
 
-  pgadmin:
-    image: dpage/pgadmin4
-    restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    ports:
-      - "8080:80"
-    networks:
-      - ingress
-    depends_on:
-      - pgsql
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: '256MB'
+#  pgadmin:
+#    image: dpage/pgadmin4
+#    restart: always
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
+#      PGADMIN_DEFAULT_PASSWORD: admin
+#    ports:
+#      - "8081:80"
+#    networks:
+#      - ingress
+#    depends_on:
+#      - pgsql
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: '0.5'
+#          memory: '256MB'
 
 networks:
   ingress:

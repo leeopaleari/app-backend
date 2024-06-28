@@ -1,4 +1,6 @@
+using Application.Interfaces;
 using Application.Mappings;
+using Application.Service;
 using Domain.Interfaces;
 using Infra.Data.Context;
 using Infra.Data.Repositories;
@@ -29,7 +31,13 @@ public static class DependencyInjection
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
 
-        services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
+        services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<ICategoryService, CategoryService>();
+
+        var handlers = AppDomain.CurrentDomain.Load("Application");
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(handlers));
+        
+        services.AddAutoMapper(typeof(DomainToDtoMappingProfile));
         return services;
     }
 }

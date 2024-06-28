@@ -9,17 +9,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea9bff8e-5891-4d27-85eb-0f28450c15ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/DTOs/CategoryDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/DTOs/ProductDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Mappings/DomainToDTOMappingProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Controllers/CategoriesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Controllers/ProductsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Commands/ProductCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Commands/ProductCreateCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Commands/ProductRemoveCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Commands/ProductUpdateCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Handlers/GetProductIdQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Handlers/GetProductsQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Handlers/ProductCreateCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Handlers/ProductRemoveCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Handlers/ProductUpdateCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Queries/GetProductByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Features/Products/Queries/GetProductsQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Interfaces/ICategoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Interfaces/IProductService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Mappings/DtoToCommandMappingProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Service/CategoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Application/Service/ProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6/storage_v2/_src_/database/local_dev.QeUuuA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6/storage_v2/_src_/database/local_dev.QeUuuA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/EntitiesConfiguration/CategoryConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/EntitiesConfiguration/CategoryConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/EntitiesConfiguration/ProductConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/EntitiesConfiguration/ProductConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/DTOs/ProductDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/DTOs/ProductDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Mappings/DomainToDTOMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Mappings/DomainToDtoMappingProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infra.IoC/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.IoC/DependencyInjection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infra.IoC/Infra.IoC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.IoC/Infra.IoC.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +53,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.IoC/DependencyInjection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a42749c8130544468d361c7e53d0799b3ea00/f7/85a2c862/NotFound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12f8d680aa1c5ae78dc1fb7cf8212be01e323372dbe3b9b87360e27c58936a/IRequest.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -173,7 +194,10 @@
       <option name="presentableId" value="Default" />
       <updated>1719427412633</updated>
       <workItem from="1719427414228" duration="16808000" />
-      <workItem from="1719450915920" duration="5790000" />
+      <workItem from="1719450915920" duration="7948000" />
+      <workItem from="1719520309617" duration="2482000" />
+      <workItem from="1719532731013" duration="2737000" />
+      <workItem from="1719597513448" duration="7157000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -183,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719453154914</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: AutoMapper e DTO">
+      <option name="closed" value="true" />
+      <created>1719456913282</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719456913282</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +227,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat: initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: initial commit" />
+    <MESSAGE value="feat: AutoMapper e DTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: AutoMapper e DTO" />
   </component>
 </project>
