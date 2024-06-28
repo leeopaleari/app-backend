@@ -38,8 +38,7 @@ public class ProductDTO
     [DisplayName("Product Image")]
     public string Image { get; set; }
     
-    // [JsonIgnore]
-    // public Category Category { get; set; }
+    public CategoryDTO Category { get; set; }
 
     [DisplayName("CategoryId")]
     public int CategoryId { get; set; }

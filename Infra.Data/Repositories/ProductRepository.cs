@@ -17,12 +17,14 @@ public class ProductRepository : IProductRepository
 
     public async Task<IEnumerable<Product>> GetAllAsync()
     {
-        return await _context.Products.ToListAsync();
+        return await _context.Products.Include(c => c.Category).ToListAsync();
     }
 
     public async Task<Product> GetByIdAsync(int? id)
     {
-        return await _context.Products.FindAsync(id);
+        return await _context.Products.Include(c => c.Category)
+            .SingleOrDefaultAsync(p => p.Id == id);
+        ;
     }
 
     public async Task<Product> CreateAsync(Product entity)
@@ -47,13 +49,5 @@ public class ProductRepository : IProductRepository
         await _context.SaveChangesAsync();
 
         return entity;
-    }
-
-    public async Task<Product> GetProductCategoryAsync(int? id)
-    {
-        // Eager loading
-        return await _context.Products
-            .Include(c => c.Category)
-            .SingleOrDefaultAsync(p => p.Id == id);
     }
 }
