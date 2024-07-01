@@ -1,9 +1,12 @@
 using Application.Interfaces;
 using Application.Mappings;
 using Application.Service;
+using Domain.Account;
 using Domain.Interfaces;
 using Infra.Data.Context;
+using Infra.Data.Identity;
 using Infra.Data.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,16 +30,26 @@ public static class DependencyInjection
                 x => x.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName))
         );
 
+        services.AddIdentity<ApplicationUser, IdentityRole>()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+
+        // Essa configuração é utilizada pra projetos webui
+        // services.ConfigureApplicationCookie(options =>
+        //     options.AccessDeniedPath = "/Auth/Login");
+
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
-        services.AddScoped<IUserRepository, UserRepository>();
+
+        services.AddScoped<IAuthenticate, AuthenticateService>();
+        // services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<ICategoryService, CategoryService>();
 
         var handlers = AppDomain.CurrentDomain.Load("Application");
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(handlers));
-        
+
         services.AddAutoMapper(typeof(DomainToDtoMappingProfile));
         return services;
     }

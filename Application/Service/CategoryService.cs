@@ -1,4 +1,5 @@
 using Application.DTOs;
+using Application.DTOs.Category;
 using Application.Interfaces;
 using AutoMapper;
 using Domain.Entities;
@@ -18,27 +19,29 @@ public class CategoryService : ICategoryService
         _mapper = mapper;
     }
 
-    public async Task<IEnumerable<CategoryDTO>> GetAll()
+    public async Task<IEnumerable<ReadCategoryDto>> GetAll()
     {
         var entity = await _categoryRepository.GetAllAsync();
 
-        return _mapper.Map<IEnumerable<CategoryDTO>>(entity);
+        return _mapper.Map<IEnumerable<ReadCategoryDto>>(entity);
     }
 
-    public async Task<CategoryDTO> GetById(int? id)
+    public async Task<ReadCategoryDto> GetById(int? id)
     {
         var entity = await _categoryRepository.GetByIdAsync(id);
 
-        return _mapper.Map<CategoryDTO>(entity);
+        return _mapper.Map<ReadCategoryDto>(entity);
     }
 
-    public async Task Add(CategoryDTO categoryDto)
+    public async Task<CreateCategoryDto> Add(CreateCategoryDto categoryDto)
     {
         var entity = _mapper.Map<Category>(categoryDto);
-        await _categoryRepository.CreateAsync(entity);
+        var createdCategory = await _categoryRepository.CreateAsync(entity);
+        
+        return _mapper.Map<CreateCategoryDto>(createdCategory);
     }
 
-    public async Task Update(CategoryDTO categoryDto)
+    public async Task Update(CreateCategoryDto categoryDto)
     {
         var entity = _mapper.Map<Category>(categoryDto);
         await _categoryRepository.UpdateAsync(entity);

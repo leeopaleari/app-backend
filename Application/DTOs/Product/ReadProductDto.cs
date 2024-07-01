@@ -1,3 +1,5 @@
+using Application.DTOs.Category;
+
 namespace Application.DTOs.Product;
 
 public class ReadProductDto
@@ -14,7 +16,8 @@ public class ReadProductDto
 
     public string Image { get; set; }
 
-    public CategoryDTO Category { get; set; }
+    // [IgnoreDataMember] // usado quando for um unico DTO e precisa ignorar a propriedade de navegação
+    public ReadCategoryDto Category { get; set; }
 
     public int CategoryId { get; set; }
 }

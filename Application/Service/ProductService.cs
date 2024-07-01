@@ -42,7 +42,7 @@ public class ProductService(IMediator mediator, IMapper mapper) : IProductServic
 
     public async Task Update(CreateProductDto productDto)
     {
-        var productUpdateCommand = mapper.Map<ProductCreateCommand>(productDto);
+        var productUpdateCommand = mapper.Map<ProductUpdateCommand>(productDto);
         await mediator.Send(productUpdateCommand);
     }
 

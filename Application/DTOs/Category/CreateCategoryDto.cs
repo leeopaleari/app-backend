@@ -1,12 +1,11 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Application.DTOs;
+namespace Application.DTOs.Category;
 
-public class CategoryDTO
+public class CreateCategoryDto
 {
     public int Id { get; set; }
-
     [Required(ErrorMessage = "The Name is required")]
     [MinLength(3)]
     [MaxLength(100)]
