@@ -204,7 +204,7 @@ namespace Infra.Data.Migrations
                     b.Property<string>("WebUrl")
                         .HasColumnType("text");
 
-                    b.Property<string>("YouTubeUrl")
+                    b.Property<string>("YoutubeUrl")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

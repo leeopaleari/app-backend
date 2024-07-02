@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infra.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240629223210_AjusteUser")]
-    partial class AjusteUser
+    [Migration("20240702011640_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -207,7 +207,7 @@ namespace Infra.Data.Migrations
                     b.Property<string>("WebUrl")
                         .HasColumnType("text");
 
-                    b.Property<string>("YouTubeUrl")
+                    b.Property<string>("YoutubeUrl")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

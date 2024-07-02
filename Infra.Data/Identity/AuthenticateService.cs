@@ -34,17 +34,17 @@ public class AuthenticateService(
             FacebookUrl = facebookUrl,
             WebUrl = webUrl,
             InstagramUrl = instagramUrl,
-            YouTubeUrl = youtubeUrl,
+            YoutubeUrl = youtubeUrl,
             HomeBase = homebase
         };
-
+    
         var result = await userManager.CreateAsync(applicationUser, password);
-
+    
         if (result.Succeeded)
         {
             await signInManager.SignInAsync(applicationUser, false);
         }
-
+    
         return result.Succeeded;
     }
 

@@ -1,6 +1,6 @@
-namespace Application.DTOs.Auth;
+namespace API.Models;
 
-public class LoginDto
+public class LoginModel
 {
     public string UserName { get; set; }
 

@@ -37,6 +37,8 @@ public class SeedUserRoleInitial(
         {
             var user = new ApplicationUser();
             user.UserName = "usuario@localhost";
+            user.FirstName = "usuario";
+            user.LastName = "localhost";
             user.Email = "usuario@localhost";
             user.NormalizedEmail = "USUARIO@LOCALHOST";
             user.NormalizedUserName = "USUARIO@LOCALHOST";

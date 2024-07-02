@@ -1,3 +1,4 @@
+using Application.DTOs;
 using Application.Interfaces;
 using Application.Mappings;
 using Application.Service;
@@ -42,7 +43,7 @@ public static class DependencyInjection
         services.AddScoped<IProductRepository, ProductRepository>();
 
         services.AddScoped<IAuthenticate, AuthenticateService>();
-        // services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
+        services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<ICategoryService, CategoryService>();
