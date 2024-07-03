@@ -1,8 +1,8 @@
 using Application.DTOs.Category;
 
-namespace Application.DTOs.Product;
+namespace Application.DTOs.Product.Response;
 
-public class ReadProductDto
+public class ProductResponse
 {
     public int Id { get; set; }
 

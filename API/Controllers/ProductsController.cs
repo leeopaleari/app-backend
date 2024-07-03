@@ -1,4 +1,5 @@
-using Application.DTOs.Product;
+using Application.DTOs.Product.Request;
+using Application.DTOs.Product.Response;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,7 +10,7 @@ namespace API.Controllers;
 public class ProductsController(IProductService productService) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<ReadProductDto>>> GetAll()
+    public async Task<ActionResult<IEnumerable<ProductResponse>>> GetAll()
     {
         try
         {
@@ -25,7 +26,7 @@ public class ProductsController(IProductService productService) : ControllerBase
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<IEnumerable<ReadProductDto>>> GetById(int id)
+    public async Task<ActionResult<IEnumerable<ProductResponse>>> GetById(int id)
     {
         try
         {
@@ -46,7 +47,7 @@ public class ProductsController(IProductService productService) : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<CreateProductDto>> Post([FromBody] CreateProductDto productDto)
+    public async Task<ActionResult<CreateProductRequest>> Post([FromBody] CreateProductRequest productRequest)
     {
         if (!ModelState.IsValid)
         {
@@ -55,16 +56,16 @@ public class ProductsController(IProductService productService) : ControllerBase
 
         try
         {
-            var productExists = await productService.GetById(productDto.Id);
+            var productExists = await productService.GetById(productRequest.Id);
 
             if (productExists is not null)
             {
                 return BadRequest(new { message = "Product already exists" });
             }
 
-            await productService.Add(productDto);
+            await productService.Add(productRequest);
 
-            return CreatedAtAction(nameof(GetById), new { Id = productDto.Id }, productDto);
+            return CreatedAtAction(nameof(GetById), new { Id = productRequest.Id }, productRequest);
         }
         catch (Exception e)
         {
@@ -74,9 +75,9 @@ public class ProductsController(IProductService productService) : ControllerBase
     }
     
     [HttpPut("{id:int}")]
-    public async Task<ActionResult> Put(int id, [FromBody] CreateProductDto productDto)
+    public async Task<ActionResult> Put(int id, [FromBody] CreateProductRequest productRequest)
     {
-        if (!ModelState.IsValid || id != productDto.Id)
+        if (!ModelState.IsValid || id != productRequest.Id)
         {
             return BadRequest(ModelState);
         }
@@ -84,9 +85,9 @@ public class ProductsController(IProductService productService) : ControllerBase
         try
         {
             // TODO: ajustar o dateCreated e dateUpdated que não estão sendo atualizados corretamente
-            await productService.Update(productDto);
+            await productService.Update(productRequest);
 
-            return Ok(productDto);
+            return Ok(productRequest);
         }
         catch (Exception e)
         {
@@ -96,7 +97,7 @@ public class ProductsController(IProductService productService) : ControllerBase
     }
     
     [HttpDelete("{id:int}")]
-    public async Task<ActionResult<ReadProductDto>> Delete(int id)
+    public async Task<ActionResult<ProductResponse>> Delete(int id)
     {
         try
         {

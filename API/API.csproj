@@ -8,22 +8,21 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Filters\" />
+        <ProjectReference Include="..\Infra.IoC\Infra.IoC.csproj" />
     </ItemGroup>
-
+    
     <ItemGroup>
-      <ProjectReference Include="..\Infra.IoC\Infra.IoC.csproj" />
+      <_ContentIncludedByDefault Remove="wwwroot\images\bloquinho-itau-0618_20240703221434.jpg" />
     </ItemGroup>
 
 </Project>

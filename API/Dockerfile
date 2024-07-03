@@ -31,6 +31,7 @@ COPY ["Application/Application.csproj", "Application/"]
 COPY ["Domain/Domain.csproj", "Domain/"]
 COPY ["Infra.Data/Infra.Data.csproj", "Infra.Data/"]
 COPY ["Infra.IoC/Infra.IoC.csproj", "Infra.IoC/"]
+COPY ["Infra.Identity/Infra.Identity.csproj", "Infra.Identity/"]
 
 RUN dotnet restore "API/API.csproj"
 COPY . .

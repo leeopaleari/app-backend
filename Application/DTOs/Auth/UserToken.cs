@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace API.Models;
+namespace Application.DTOs.Auth;
 
 public class UserToken
 {

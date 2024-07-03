@@ -1,5 +1,4 @@
-namespace Domain.Account;
-
+namespace Infra.Identity.Interfaces;
 public interface ISeedUserRoleInitial
 {
     void SeedUsers();

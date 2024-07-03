@@ -2,9 +2,9 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Application.DTOs.Product;
+namespace Application.DTOs.Product.Request;
 
-public class CreateProductDto
+public class CreateProductRequest
 {
     public int Id { get; set; }
 

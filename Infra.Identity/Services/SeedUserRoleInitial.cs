@@ -1,8 +1,8 @@
-using Domain.Account;
+using Infra.Data.Identity;
+using Infra.Identity.Interfaces;
 using Microsoft.AspNetCore.Identity;
 
-namespace Infra.Data.Identity;
-
+namespace Infra.Identity.Services;
 
 public class SeedUserRoleInitial(
     UserManager<ApplicationUser> userManager,

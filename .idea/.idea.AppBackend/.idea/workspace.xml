@@ -8,38 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea9bff8e-5891-4d27-85eb-0f28450c15ab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/API/Models/LoginModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/API/Models/UserToken.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/DTOs/RegisterUserDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Interfaces/IAuthService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infra.IoC/DependencyInjectionJwt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6/storage_v2/_src_/database/local_dev.QeUuuA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/dataSources/aa82126e-2372-4c5d-b0b1-e1a87b350fa6/storage_v2/_src_/database/local_dev.QeUuuA/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AppBackend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/DTOs/Auth/LoginDto.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/DTOs/Auth/RegisterDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/API/Models/UserCreateDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Interfaces/IUserService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Mappings/DomainToDtoMappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Mappings/DomainToDtoMappingProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Entities/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Interfaces/IUserRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Identity/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/Identity/ApplicationUser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Identity/AuthenticateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/Identity/AuthenticateService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Identity/SeedUserRoleInitial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/Identity/SeedUserRoleInitial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Migrations/20240628204605_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Migrations/20240628204605_Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/Migrations/20240702011640_InitialMigration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Migrations/20240629214609_UserExtensions.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Migrations/20240629214609_UserExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Migrations/20240629223210_AjusteUser.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/Migrations/20240702011640_InitialMigration.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Migrations/20240629223210_AjusteUser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Data/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.Data/Repositories/UserRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.IoC/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.IoC/DependencyInjection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infra.IoC/Infra.IoC.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.IoC/Infra.IoC.csproj" afterDir="false" />
+    <list default="true" id="ea9bff8e-5891-4d27-85eb-0f28450c15ab" name="Changes" comment="wip: ajustes auth">
+      <change afterPath="$PROJECT_DIR$/Application/Interfaces/IFileService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infra.Identity/Services/IdentityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infra.Identity/Services/IdentityService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,22 +23,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;leeopaleari&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/leeopaleari/app-backend.git&quot;,
+    &quot;accountId&quot;: &quot;c9f29a9a-2935-42b5-9bba-40d4d78dbe05&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/API/Controllers/AuthController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/API/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/API/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Application/Mappings/DomainToDtoMappingProfile.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Application/Mappings/DomainToDtoMappingProfile.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Domain/Entities/User.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Domain/Entities/User.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.Data/Identity/ApplicationUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.Data/Identity/ApplicationUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.Data/Identity/ApplicationUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.Data/Identity/AuthenticateService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.Data/Identity/AuthenticateService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.Data/Identity/SeedUserRoleInitial.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.Data/Migrations/ApplicationDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/paleari/Documents/repos/AppBackend/Infra.IoC/DependencyInjection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/457d922efdcc44c78bb865f6127ffe3376000/42/4f2a4995/IdentityResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6090dad8e1674e0d829d558fc13952bf219600/b7/0959ff42/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a42749c8130544468d361c7e53d0799b3ea00/f7/85a2c862/NotFound.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/12f8d680aa1c5ae78dc1fb7cf8212be01e323372dbe3b9b87360e27c58936a/IRequest.cs" root0="SKIP_HIGHLIGHTING" />
@@ -89,34 +59,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.API: http.executor&quot;: &quot;Run&quot;,
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;HTTP Request.API | #1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.API: http.executor": "Run",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "HTTP Request.API | #1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "XThreadsFramesViewSplitterKey": "0.25553662",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ],
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/paleari/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/paleari/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/paleari/Library/Application Support/Symbols/src&quot;
+    "rider.external.source.directories": [
+      "/Users/paleari/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/paleari/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/paleari/Library/Application Support/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.API: http">
     <configuration name="API | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/API/API.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
@@ -215,7 +186,9 @@
       <workItem from="1719532731013" duration="2737000" />
       <workItem from="1719597513448" duration="11966000" />
       <workItem from="1719684987479" duration="30471000" />
-      <workItem from="1719924356631" duration="1418000" />
+      <workItem from="1719924356631" duration="30665000" />
+      <workItem from="1720043526187" duration="212000" />
+      <workItem from="1720043754833" duration="1404000" />
     </task>
     <task id="LOCAL-00001" summary="feat: initial commit">
       <option name="closed" value="true" />
@@ -281,7 +254,55 @@
       <option name="project" value="LOCAL" />
       <updated>1719853822069</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="wip: Controllers">
+      <option name="closed" value="true" />
+      <created>1719944116108</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719944116108</updated>
+    </task>
+    <task id="LOCAL-00010" summary="wip: ajustes auth">
+      <option name="closed" value="true" />
+      <created>1719972427065</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719972427065</updated>
+    </task>
+    <task id="LOCAL-00011" summary="wip: ajustes auth">
+      <option name="closed" value="true" />
+      <created>1720012799295</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720012799295</updated>
+    </task>
+    <task id="LOCAL-00012" summary="wip: ajustes auth">
+      <option name="closed" value="true" />
+      <created>1720037832202</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720037832202</updated>
+    </task>
+    <task id="LOCAL-00013" summary="wip: ajustes auth">
+      <option name="closed" value="true" />
+      <created>1720038445587</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720038445587</updated>
+    </task>
+    <task id="LOCAL-00014" summary="wip: ajustes auth">
+      <option name="closed" value="true" />
+      <created>1720044988714</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720044988714</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +310,18 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -309,6 +342,16 @@
     <MESSAGE value="fix: get products" />
     <MESSAGE value="fix: dto" />
     <MESSAGE value="feat: controllers produto e category" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: controllers produto e category" />
+    <MESSAGE value="wip: Controllers" />
+    <MESSAGE value="wip: ajustes auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip: ajustes auth" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#Microsoft.AspNetCore.Http.HttpContext+HttpContextDebugView" memberName="User" />
+        <PinnedItemInfo parentTag="Type#Microsoft.AspNetCore.Identity.IdentityResult" memberName="Errors" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

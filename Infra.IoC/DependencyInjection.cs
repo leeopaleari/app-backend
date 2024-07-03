@@ -1,12 +1,14 @@
-using Application.DTOs;
 using Application.Interfaces;
 using Application.Mappings;
 using Application.Service;
-using Domain.Account;
+using AutoMapper;
 using Domain.Interfaces;
 using Infra.Data.Context;
 using Infra.Data.Identity;
 using Infra.Data.Repositories;
+using Infra.Identity.Interfaces;
+using Infra.Identity.Mapper;
+using Infra.Identity.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,18 +33,15 @@ public static class DependencyInjection
                 x => x.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName))
         );
 
-        services.AddIdentity<ApplicationUser, IdentityRole>()
+        services.AddDefaultIdentity<ApplicationUser>()
+            .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
-
-        // Essa configuração é utilizada pra projetos webui
-        // services.ConfigureApplicationCookie(options =>
-        //     options.AccessDeniedPath = "/Auth/Login");
 
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
 
-        services.AddScoped<IAuthenticate, AuthenticateService>();
+        services.AddScoped<IIdentityService, IdentityService>();
         services.AddScoped<ISeedUserRoleInitial, SeedUserRoleInitial>();
 
         services.AddScoped<IProductService, ProductService>();
@@ -51,7 +50,14 @@ public static class DependencyInjection
         var handlers = AppDomain.CurrentDomain.Load("Application");
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(handlers));
 
-        services.AddAutoMapper(typeof(DomainToDtoMappingProfile));
+        MapperConfiguration mappingConfig = new(mc =>
+        {
+            mc.AddProfile(new IdentityProfile());
+            mc.AddProfile(new DomainToDtoMappingProfile());
+        });
+
+        services.AddSingleton(mappingConfig.CreateMapper());
+
         return services;
     }
 }

@@ -11,8 +11,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
-      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.6" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
         <PrivateAssets>none</PrivateAssets>
@@ -22,13 +20,13 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
-      <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.6" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\Infra.Identity\Infra.Identity.csproj" />
     </ItemGroup>
 
 </Project>

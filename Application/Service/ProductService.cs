@@ -1,4 +1,5 @@
-using Application.DTOs.Product;
+using Application.DTOs.Product.Request;
+using Application.DTOs.Product.Response;
 using Application.Features.Products.Commands;
 using Application.Features.Products.Queries;
 using Application.Interfaces;
@@ -9,7 +10,7 @@ namespace Application.Service;
 
 public class ProductService(IMediator mediator, IMapper mapper) : IProductService
 {
-    public async Task<IEnumerable<ReadProductDto>> GetAll()
+    public async Task<IEnumerable<ProductResponse>> GetAll()
     {
         var productsQuery = new GetProductsQuery();
 
@@ -19,10 +20,10 @@ public class ProductService(IMediator mediator, IMapper mapper) : IProductServic
 
         var result = await mediator.Send(productsQuery);
 
-        return mapper.Map<IEnumerable<ReadProductDto>>(result);
+        return mapper.Map<IEnumerable<ProductResponse>>(result);
     }
 
-    public async Task<ReadProductDto> GetById(int? id)
+    public async Task<ProductResponse> GetById(int? id)
     {
         var productsQuery = new GetProductByIdQuery(id.Value);
 
@@ -31,18 +32,18 @@ public class ProductService(IMediator mediator, IMapper mapper) : IProductServic
 
         var result = await mediator.Send(productsQuery);
 
-        return mapper.Map<ReadProductDto>(result);
+        return mapper.Map<ProductResponse>(result);
     }
 
-    public async Task Add(CreateProductDto productDto)
+    public async Task Add(CreateProductRequest productRequest)
     {
-        var productCreateCommand = mapper.Map<ProductCreateCommand>(productDto);
+        var productCreateCommand = mapper.Map<ProductCreateCommand>(productRequest);
         await mediator.Send(productCreateCommand);
     }
 
-    public async Task Update(CreateProductDto productDto)
+    public async Task Update(CreateProductRequest productRequest)
     {
-        var productUpdateCommand = mapper.Map<ProductUpdateCommand>(productDto);
+        var productUpdateCommand = mapper.Map<ProductUpdateCommand>(productRequest);
         await mediator.Send(productUpdateCommand);
     }
 
