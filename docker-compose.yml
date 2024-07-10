@@ -1,20 +1,20 @@
 ﻿services:
-#  api:
-#    image: api
-#    build:
-#      context: .
-#      dockerfile: API/Dockerfile
+  api:
+    image: api
+    build:
+      context: .
+      dockerfile: API/Dockerfile
 #    deploy:
 #      resources:
 #        limits:
-#          cpus: '0.25'
-#          memory: '128MB'
-#    ports:
-#      - "8080:8080"
-#    depends_on:
-#      - pgsql
-#    networks:
-#      - ingress
+#          cpus: '1.0'
+#          memory: '512GB'
+    ports:
+      - "8080:8080"
+    depends_on:
+      - pgsql
+    networks:
+      - ingress
 
 #    mysql:
 #      image: mysql:latest
@@ -52,11 +52,11 @@
       POSTGRES_PASSWORD: 1232
     networks:
       - ingress
-    deploy:
-      resources:
-        limits:
-          cpus: '0.5'
-          memory: '128MB'
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: '0.5'
+#          memory: '512GB'
 
 #  pgadmin:
 #    image: dpage/pgadmin4

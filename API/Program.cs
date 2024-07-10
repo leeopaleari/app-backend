@@ -1,3 +1,4 @@
+using Infra.Data.Extensions;
 using Infra.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +29,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+DatabaseManagementService.MigrationInitialisation(app);
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
