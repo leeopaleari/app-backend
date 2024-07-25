@@ -2,20 +2,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Application.DTOs.User;
 
-public class UserCreateRequest
+public class GoogleUserCreateRequest
 {
     [Required]
     [MinLength(3)]
     [MaxLength(20)]
     public string FirstName { get; set; }
-
-    [Required]
-    [DataType(DataType.Password)]
-    public string Password { get; set; }
-
-    [DataType(DataType.Password)]
-    [Compare("Password", ErrorMessage = "Passwords don't match!")]
-    public string ConfirmPassword { get; set; }
 
     public string UserName { get; set; }
 

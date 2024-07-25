@@ -1,12 +1,14 @@
 using Application.DTOs.Product.Request;
 using Application.DTOs.Product.Response;
 using Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize(AuthenticationSchemes = "Bearer")]
 public class ProductsController(IProductService productService) : ControllerBase
 {
     [HttpGet]

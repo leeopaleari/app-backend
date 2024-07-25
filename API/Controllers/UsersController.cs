@@ -1,6 +1,6 @@
 using API.Models;
 using Application.DTOs.User;
-using Application.Interfaces;
+using Infra.Identity.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +14,7 @@ public class UsersController(IIdentityService authService) : ControllerBase
     [HttpPost]
     [Route("register")]
     [AllowAnonymous]
-    public async Task<IActionResult> CreateUser([FromForm] UserCreateApiDto userCreateDto)
+    public async Task<IActionResult> CreateUser(UserCreateApiDto userCreateDto)
     {
         if (!ModelState.IsValid)
         {
